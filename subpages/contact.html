@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Matthew's Website</title>
+    <link href="../stylesheets/stylesheet.css" rel="stylesheet">
+    <script src="../scripts/script.js"></script>
+</head>
+<body>
+<div class="navbar">
+    <!-- This gets the navbar inserted by the js file -->
+    <p style="width: 10%; margin-right: 2%; font-size: 25px; background-color: aqua; float:left;"
+       onclick="window.location.href = '../index.html'">
+        Home Page
+    </p>
+
+    <p style="width: 10%; margin-right: 2%; font-size: 25px; background-color: aqua; float: left;"
+       onclick="window.location.href = '../subpages/about.html'">
+        About Me
+    </p>
+
+    <p style="width: 10%; margin-right: 2%; font-size: 25px; background-color: aqua; float: left;"
+       onclick="window.location.href='../subpages/contact.html'">
+        Contact
+    </p>
+</div>
+<div style="clear: both"></div>
+<div class="main">
+    <br/>
+    <img src="../images/contact.jpg" style="margin-right: 50px; float: left;">
+
+    <h1 class="title" style="float: left">Contact Me</h1>
+    <div style="clear: left"></div>
+    <div class="content">
+        <form action="submit">
+            <h3 class="name">Your Name</h3>
+            <input type="text" placeholder="Your Name Here">
+            <h3 class="info">Your Message</h3>
+            <textarea placeholder="Your Message Here"></textarea>
+            <br/>
+            <br/>
+            <button type="submit" formaction="submit">Submit Form</button>
+        </form>
+    </div>
+</div>
+<div style="clear: both"></div>
+<div class="footer" align="center">
+    Matthew Munger ☃
+</div>
+</body>
+</html>

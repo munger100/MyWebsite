@@ -1,0 +1,31 @@
+.title {
+    font-size: 40px;
+}
+
+.banner {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+
+}
+
+.subtitle {
+    font-size: 25px;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    height: 100px;
+    background-color: mediumpurple;
+    float:left;
+}
+li {
+    list-style-type: None;
+    float: left;
+}
+.footer {
+    align: center;
+}
