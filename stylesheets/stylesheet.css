@@ -1,3 +1,10 @@
+@font-face {font-family: Argh; src: url("/MyWebsite/fonts/Aaargh.ttf")}
+@font-face {font-family: Abz; src: url("/MyWebsite/fonts/ABeeZee-Regular.otf")}
+@font-face {font-family: Aleo; src: url("/MyWebsite/fonts/Aleo-Regular.otf")}
+@font-face {font-family: Aller; src: url("/MyWebsite/fonts/Aller_Rg.ttf")}
+html {
+    font-family: Abz;
+}
 .title {
     font-size: 40px;
 }
@@ -18,14 +25,26 @@ body {
     padding: 0;
 }
 .navbar {
+    font-size: 35px;
     height: 100px;
+    width: 100%;
     background-color: mediumpurple;
     float:left;
 }
 li {
     list-style-type: None;
     float: left;
+    margin-top: 26px;
+}
+a {
+    text-decoration: none;
 }
 .footer {
-    align: center;
+    : center;
+}
+ul {
+    margin: 0px;
+}
+.main {
+    align-content: center;
 }
