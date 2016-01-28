@@ -1,15 +1,17 @@
 $(document).ready(function () {
+    var indexs =  window.location.href.split("/");
+    var index =indexs[indexs.length-1] == "index.html";
     var body = $(document.getElementsByTagName('body')),
         navbar = '<div class="navbar">' +
             '<ul> ' +
             '<li class="navbarli"">' +
-            '<a href="/MyWebsite/index.html">HOME PAGE</a>' +
+            '<a href="' + (index ? "" : "../" )+ 'index.html">HOME PAGE</a>' +
             '</li> ' +
             '<li class="navbarli">' +
-            '<a href="/MyWebsite/subpages/about.html">ABOUT ME</a>' +
+            '<a href="' + (index ? "" : "../" )+ 'subpages/about.html">ABOUT ME</a>' +
             '</li> ' +
-            '<li class="navbarli" onclick="window.location.href=\'/MyWebsite/subpages/contact.html\'">' +
-            '<a href="/MyWebsite/subpages/contact.html">CONTACT ME</a>' +
+            '<li class="navbarli">' +
+            '<a href="' + (index ? "" : "../" )+ 'subpages/contact.html">CONTACT ME</a>' +
             '</li>' +
             '</ul>' +
             '</div>',

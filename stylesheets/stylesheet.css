@@ -2,7 +2,10 @@
 @font-face {font-family: Abz; src: url("/MyWebsite/fonts/ABeeZee-Regular.otf")}
 @font-face {font-family: Aleo; src: url("/MyWebsite/fonts/Aleo-Regular.otf")}
 @font-face {font-family: Aller; src: url("/MyWebsite/fonts/Aller_Rg.ttf")}
+
+
 html {
+
     font-family: Abz;
 }
 .title {
@@ -31,13 +34,20 @@ body {
     background-color: mediumpurple;
     float:left;
 }
+
+.navbar > li {
+
+}
+
 li {
     list-style-type: None;
     float: left;
-    margin-top: 26px;
+    margin-top: 27px;
+    margin-left: 200px;
 }
 a {
     text-decoration: none;
+    color: #333367;
 }
 .footer {
     : center;
@@ -47,4 +57,17 @@ ul {
 }
 .main {
     align-content: center;
+}
+
+.content {
+    width: 50%;
+    margin-left:4%;
+    float:left;
+}
+.img {
+    width: 20%;
+    float:left;
+}
+img {
+    width: 100%; margin: 20px
 }
