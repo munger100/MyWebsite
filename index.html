@@ -3,35 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Matthew's Website</title>
-    <script src="scripts/jquery.min.js"></script>
-    <script src="scripts/script.js"></script>
-    <link href="stylesheets/stylesheet.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <link href="css/stylesheet.css" rel="stylesheet">
 </head>
 <body>
-<div class="main">
-    <img class="banner" src="./images/banner.jpg">
+<div id="main">
 
-    <h1 class="title">My Name is Matthew Munger</h1>
+    <div class="banner">
+        <img class="banner" src="./images/banner.jpg">
+    </div>
 
     <div class="content">
-        <div class="one">
-            <h3 class="subtitle" >My Family</h3>
+        <h1 class="title">My Name is Matthew Munger</h1>
 
-            <p style="font-size: 18px;">I am the oldest of four children and we own a dog and 4 ducks which we adopt
-                during the summer.</p>
+        <div class="block">
+            <h3 class="subtitle">My Family</h3>
+
+            <p>I am the oldest of four children. My family is half French, from Saguenay, half
+                English, from Candiac. </p>
             <button type="button" onclick="window.location.href='./subpages/about.html'">Read more</button>
         </div>
-        <div class="two">
+        <div class="block">
             <h3 class="subtitle">My School</h3>
 
-            <p style="font-size: 18px;">I attend Heritage Regional High School and am in the iCan computer program. With
+            <p>I attend Heritage Regional High School and am in the iCan computer program. With
                 high grades in math and science, I prefer programming over 3d modeling or Photoshop.</p>
             <button type="button" onclick="window.location.href='./subpages/about.html'">Read more</button>
         </div>
-        <div class="three">
+        <div class="block">
             <h3 class="subtitle">My Job</h3>
 
-            <p style="font-size: 18px;">I work at a breakfast restaurant in the DIX30 on weekends.</p>
+            <p>I work at a breakfast restaurant in the DIX30 on weekends.</p>
             <button type="button" onclick="window.location.href='./subpages/about.html'">Read more</button>
         </div>
     </div>
