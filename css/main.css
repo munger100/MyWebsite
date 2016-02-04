@@ -40,12 +40,12 @@ body {
     float: left;
 }
 
-li {
+.navbarli {
     list-style-type: None;
     float: left;
     margin-top: 2.2%;
-    margin-left: 10.5%;
-    width: 230px;
+    margin-left: 11%;
+    width: 20%;
 }
 
 a {
@@ -85,28 +85,20 @@ img {
 
 .block {
     margin-left: 10%;
+    text-indent: 4%;
 }
-
+#aboutblock {
+    margin-left: 50px;
+}
 .block > p {
     font-size: 18px;
 }
-
-/** For the buttons, I did look up A LOT of compatibility error possibilities, and that made this css 
-    section really long. I also got my gradient from a tutorial I found online, but I did input all my colours manually
-    and the margins were edited. **/
 
 button {
     -moz-box-shadow: inset 0 1px 0 0 #efdcfb;
     -webkit-box-shadow: inset 0 1px 0 0 #efdcfb;
     box-shadow: inset 0 1px 0 0 #efdcfb;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfbdfa), color-stop(1, #9752cc));
-    background: -moz-linear-gradient(top, #dfbdfa 5%, #9752cc 100%);
-    background: -webkit-linear-gradient(top, #dfbdfa 5%, #9752cc 100%);
-    background: -o-linear-gradient(top, #dfbdfa 5%, #9752cc 100%);
-    background: -ms-linear-gradient(top, #dfbdfa 5%, #9752cc 100%);
-    background: linear-gradient(to bottom, #dfbdfa 5%, #9752cc 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfbdfa', endColorstr='#9752cc', GradientType=0);
-    background-color: #dfbdfa;
+    background: url("../images/buttonbg.png");
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
     border-radius: 6px;
@@ -120,19 +112,8 @@ button {
 }
 
 button:hover {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #9752cc), color-stop(1, #dfbdfa));
-    background: -moz-linear-gradient(top, #9752cc 5%, #dfbdfa 100%);
-    background: -webkit-linear-gradient(top, #9752cc 5%, #dfbdfa 100%);
-    background: -o-linear-gradient(top, #9752cc 5%, #dfbdfa 100%);
-    background: -ms-linear-gradient(top, #9752cc 5%, #dfbdfa 100%);
-    background: linear-gradient(to bottom, #9752cc 5%, #dfbdfa 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9752cc', endColorstr='#dfbdfa', GradientType=0);
-    background-color: #9752cc;
-}
+    background: url("../images/buttonbghover.png");
 
-.myButton:active {
-    position: relative;
-    top: 1px;
 }
 
 #wrapper {
@@ -148,4 +129,41 @@ button:hover {
     bottom: 0;
     left: 0;
     background-color: #7b64c6;
+}
+
+.img > img {
+    width: 100%;
+    margin: 20px;
+}
+main {
+    margin: 0;
+}
+form {
+    margin-left: 50px;
+}
+
+.contact {
+    float: left;
+    width: 20% margin : 0;
+    padding: 0;
+    display: inline;
+    list-style-type: None;
+}
+
+#nameerror, #msgerror, #emailerror {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 0 20%;
+    display: none;
+}
+
+#namediv, #msgdiv, #emaildiv {
+    width: 40%;
+    margin-left: 5%;
+    color: red;
+    height: 30px;
+}
+
+.clear {
+    clear: both;
 }
