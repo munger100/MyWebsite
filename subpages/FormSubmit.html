@@ -39,7 +39,17 @@
         }
         var params = getParams();
         console.log("Params" + params);
-        $('#name').text(decodeURIComponent(params['name']));
+        var newname = "";
+        var names = decodeURI(params['name']).split(" ");
+        names.forEach(function(name){
+            var nameNew = name.split("");
+            nameNew[0] = nameNew[0].toUpperCase();
+            newname += nameNew.join("") + " ";
+        });
+        newname = newname.trim();
+
+
+        $('#name').text(newname);
         $('#msg').html("<b>Message:</b> " + decodeURIComponent(params['msg']));
         $('#email').html("<b>From:</b> " + decodeURIComponent(params['email']));
 
