@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Contact Me</title>
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/main.js"></script>
-    <link href="../css/main.css" rel="stylesheet">
-</head>
-<body>
+<?php
+$title = "Thank You!";
+require "../root/menu.php";
+?>
 <div id="main" style="margin: 0">
     <div class="img">
         <img src="../images/contact.jpg">
@@ -56,5 +50,6 @@
 
     </script>
 </div>
-</body>
-</html>
+<?php
+require "../root/footer.php";
+?>

@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>About Me</title>
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/main.js"></script>
-    <link href="../css/main.css" rel="stylesheet">
-</head>
-<body>
+<?php
+$title = "About Me";
+require "../root/menu.php";
+?>
 <div id="main">
     <div class="img">
         <img src="../images/about.jpg">
@@ -24,5 +18,6 @@
         </p>
     </div>
 </div>
-</body>
-</html>
+<?php
+require "../root/footer.php";
+?>

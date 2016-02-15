@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Matthew's Website</title>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/main.js"></script>
-    <link href="css/main.css" rel="stylesheet">
-</head>
-<body>
+<?php
+$title = "Home";
+require "root/menu.php";
+?>
 <div id="main">
-
     <div class="banner">
         <img class="banner" src="./images/banner.jpg">
     </div>
@@ -22,23 +15,24 @@
 
             <p>I am the oldest of four children. My family is half French, from Saguenay, half
                 English, from Candiac. </p>
-            <button type="button" onclick="window.location.href='./subpages/about.html'">Read more</button>
+            <button type="button" onclick="window.location.href='subpages/about.php'">Read more</button>
         </div>
         <div class="block">
             <h3 class="subtitle">My School</h3>
 
             <p>I attend Heritage Regional High School and am in the iCan computer program. With
                 high grades in math and science, I prefer programming over 3d modeling or Photoshop.</p>
-            <button type="button" onclick="window.location.href='./subpages/about.html'">Read more</button>
+            <button type="button" onclick="window.location.href='subpages/about.php'">Read more</button>
         </div>
         <div class="block">
             <h3 class="subtitle">My Job</h3>
 
             <p>I work at a breakfast restaurant in the DIX30 on weekends.</p>
-            <button type="button" onclick="window.location.href='./subpages/about.html'">Read more</button>
+            <button type="button" onclick="window.location.href='subpages/about.php'">Read more</button>
         </div>
     </div>
 
 </div>
-</body>
-</html>
+<?php
+require "root/footer.php";
+?>

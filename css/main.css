@@ -3,13 +3,13 @@
     src: url("../fonts/ABeeZee-Regular.otf")
 }
 
-html {
-    font-family: Abz, Garamond, Arial;
+
+html, body {
     margin: 0;
+    font-family: Abz, Garamond, Arial;
     padding: 0;
     height: 100%;
 }
-
 .title {
     font-size: 40px;
 }
@@ -26,11 +26,6 @@ html {
     font-size: 25px;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
 
 .navbar {
     font-size: 35px;
@@ -126,6 +121,7 @@ button:hover {
         Took me a lot of trial and error. **/
     width: 100%;
     position: absolute;
+    text-align: center;
     bottom: 0;
     left: 0;
     background-color: #7b64c6;
@@ -135,8 +131,10 @@ button:hover {
     width: 100%;
     margin: 20px;
 }
-main {
+#main {
     margin: 0;
+padding-bottom:100px; /* Height of the footer element */
+
 }
 form {
     margin-left: 50px;
