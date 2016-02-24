@@ -1,6 +1,6 @@
 <?php
 $title = "Contact Me";
-require "../root/menu.php";
+require "../menu.php";
 ?>
 <div id="main">
     <div class="img">
@@ -9,30 +9,30 @@ require "../root/menu.php";
     <div class="content">
         <h1 class="title">Contact Me</h1>
 
-        <form id="contactform">
-            <h3 class="name">Your Name</h3>
+        <form id="contactform" action="contact-process.php" method="post">
+            <h3>Your Name</h3>
 
             <div class="contact">
-                <input type="text" id="nameinput" name="name" placeholder="Your Name Here">
+                <input type="text" name="name" id="nameinput" placeholder="Your Name Here">
             </div>
             <div class="contact" id="namediv">
                 <p class="error" id="nameerror">You must enter a name.</p>
             </div>
             <div class="clear"></div>
-            <h3 class="email">Email</h3>
+            <h3>Email</h3>
 
             <div class="contact">
-                <input type="text" id="emailinput" name="email" placeholder="Your Email Here">
+                <input type="text" name="email" id="emailinput" placeholder="Your Email Here">
             </div>
             <div class="contact" id="emaildiv">
                 <p class="error" id="emailerror">You must enter a valid email.</p>
             </div>
 
             <div class="clear"></div>
-            <h3 class="info">Your Message</h3>
+            <h3>Your Message</h3>
 
             <div class="contact">
-                <textarea id="msginput" placeholder="Your Message Here"></textarea>
+                <textarea name="message" placeholder="Your Message Here" id="msginput"></textarea>
             </div>
             <div class="contact" id="msgdiv">
                 <p class="error" id="msgerror">You must enter a message.</p>
@@ -40,10 +40,11 @@ require "../root/menu.php";
             <div class="clear"></div>
             <br/>
             <br/>
-            <button id="submitform" name="msg" type="submit">Submit Form</button>
+            <button id="submit" type="submit">Submit Form</button>
+            <button id="autofill" type="button">Autofill</button>
         </form>
     </div>
 </div>
 <?php
-require "../root/footer.php";
+require "../footer.php";
 ?>

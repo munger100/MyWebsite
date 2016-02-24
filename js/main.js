@@ -6,9 +6,64 @@ $(document).ready(function () {
     // Insert navbar and footer
     body.html(reset_float + body.html() + reset_float);
     // Form management
-    $('#contactform').submit(function (event) {
+
+    /*
+    //$(document).ready(function() {
+    //
+    //
+    //    $("#main-form").on("submit", function(e) {
+    //        $(".error").html(''); // clear error messages
+    //        var errorFlag = false;
+    //        var thisForm = $(this);
+    //        var name = $("#name").val();
+            var email = $("#email").val();
+            var message = $("#message").val();
+
+            if (!name) {
+                $("#errorName").html('Please enter your name');
+                errorFlag = true;
+            }
+
+            if (!email) {
+                $("#errorEmail").html('Please enter your email');
+                errorFlag = true;
+            } else if (!isEmail(email)) {
+                $("#errorEmail").html('Please enter a <strong>valid</strong> email');
+                errorFlag = true;
+            }
+
+            if (!message) {
+                $("#errorMessage").html('Please enter a message');
+                errorFlag = true;
+            }
+
+            if (!errorFlag) {
+                $("#submitButton").val('Sending ...').attr('disabled', 'disabled');
+                alert("Hello " + name);
+                alert("I see your email is " + email);
+                alert("and you wanted to say \"" + message + "\"");
+                // thisForm.unbind('submit').submit(); // default post
+                $.post(thisForm.attr("action"), { Action: "postContact", name: name, email: email, message: message }, function(response) {
+                    alert(response);
+                    $("#submitButton").val(response);
+                }); // post to original target via ajax and receive response
+            }
+
+        });
+
+    });
+    */
+
+    $("#autofill").click(function() {
+
+        $('#nameinput').val("Firstname Lastname");
+        $('#msginput').val("Test message.");
+        $('#emailinput').val("test@testy.test");
+    });
+    $('#contactform').on("submit", function (event) {
+        event.preventDefault();
         var nameval = $('#nameinput').val();
-        var msgval = $('#msginput').val();
+        var msgval = $('#msginput').val;
         var emailval = $('#emailinput').val();
         var nameerror = $('#nameerror');
         var msgerror = $('#msgerror');
@@ -40,21 +95,20 @@ $(document).ready(function () {
             emailerror.hide();
         }
 
+        var form = $(this);
+        var formData =  form.serializeArray();
         if (submit) {
-            window.location.href = "../subpages/FormSubmit.html?name=" + nameval + "&email=" + emailval + "&msg=" + msgval;
+            console.log("Submitting");
+            $.post("../subpages/contact-process.php",formData, function(response) {
+                form.html(response + " ");
+                console.log(formData)
+
+            });
         }
-        event.preventDefault();
     });
     function isValidEmail(email) {
-        if (email.indexOf('@') === -1) {
-            return false;
-        }
-        ending = email.split("@")[1];
-        first = ending.split(".")[0];
-        last = ending.split(".")[1];
-        if (first === "") {
-            return false;
-        }
-        return last !== "";
-    }
+        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        return regex.test(email);
+     }
+
 });

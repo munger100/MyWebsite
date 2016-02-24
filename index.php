@@ -1,6 +1,6 @@
 <?php
 $title = "Home";
-require "root/menu.php";
+require "menu.php";
 ?>
 <div id="main">
     <div class="banner">
@@ -34,5 +34,5 @@ require "root/menu.php";
 
 </div>
 <?php
-require "root/footer.php";
+require "footer.php";
 ?>
