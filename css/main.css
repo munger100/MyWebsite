@@ -89,7 +89,7 @@ img {
     font-size: 18px;
 }
 
-button {
+button, input.retry{
     -moz-box-shadow: inset 0 1px 0 0 #efdcfb;
     -webkit-box-shadow: inset 0 1px 0 0 #efdcfb;
     box-shadow: inset 0 1px 0 0 #efdcfb;
@@ -106,7 +106,7 @@ button {
     text-shadow: 0 1px 0 #9752cc;
 }
 
-button:hover {
+button:hover, input.retry:hover {
     background: url("../images/buttonbghover.png");
     cursor: pointer;
 
@@ -166,4 +166,8 @@ form {
 
 .clear {
     clear: both;
+}
+
+.hide{
+    display:none;
 }

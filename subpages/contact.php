@@ -3,6 +3,7 @@ $title = "Contact Me";
 require "../menu.php";
 ?>
 <div id="main">
+    <!--
     <div class="img">
         <img src="../images/contact.jpg">
     </div>
@@ -43,7 +44,17 @@ require "../menu.php";
             <button id="submit" type="submit">Submit Form</button>
             <button id="autofill" type="button">Autofill</button>
         </form>
+        <div id="form-error" class="hide">
+            You have already entered information using that email.<br/><br/>
+            Please try again using another email.<br/><br/><br/>
+            <input class="retry" type="button" value="Retry">
+
+        </div>
+        <div id="form-success" class="hide">
+            Thank you! Your information was entered successfully!
+        </div>
     </div>
+    -->
 </div>
 <?php
 require "../footer.php";

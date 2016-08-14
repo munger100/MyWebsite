@@ -3,6 +3,7 @@ $title = "About Me";
 require "../menu.php";
 ?>
 <div id="main">
+    <!--
     <div class="img">
         <img src="../images/about.jpg">
     </div>
@@ -17,6 +18,7 @@ require "../menu.php";
 
         </p>
     </div>
+    -->
 </div>
 <?php
 require "../footer.php";

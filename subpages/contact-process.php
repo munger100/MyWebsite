@@ -1,34 +1,24 @@
 <?php
-$name = $_POST["name"];
-$name = ucwords($name);
+
+require "contact-database.php";
+
+$name = ucwords($_POST["name"]);
 
 $email = $_POST["email"];
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     die();
 }
+$message = $_POST["message"];
+$result = mysqli_query($conn, "SELECT Email from ContactTable WHERE Email =    '$email'");
 
-$message = $_POST['message'];
-
-$filename = "contact.txt";
-
-$file = fopen($filename, "a+");
-/* json try
-$existing = fread($file, filesize($filename));
-$existing = file_get_contents($filename);
-print_r("a" . $existing);
-if($existing){
-    $json = json_decode($existing);
-}else{
-    $json = [];
+if (mysqli_num_rows($result) > 0) {
+    die("error");
 }
 
-$json[] = [
- "name" => $name,
- "email" => $email,
- "message" => $message
-];
-*/
-fwrite($file, "\nName: " . $name . "\nEmail: " . $email . "\nMessage: " . $message);
+$query = 'INSERT INTO ContactTable (Name, Email, Message) VALUES ("%s", "%s", "%s")';
+$query = sprintf($query, $name, $email, $message);
+if ($result = mysqli_query($conn, $query)) {
+//        echo 'Inserted record successfully';
 
-echo "Thank you!"
+}
 ?>
